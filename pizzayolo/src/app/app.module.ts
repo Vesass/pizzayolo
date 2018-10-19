@@ -32,7 +32,6 @@ import { FooterComponent } from './footer/footer.component';
     PanierComponent,
     PaiementComponent,
     DeliveryComponent,
-    NavBatComponent,
     NavBarComponent,
     FooterComponent
   ],
