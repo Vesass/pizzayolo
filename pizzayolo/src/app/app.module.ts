@@ -14,7 +14,7 @@ import { EditProfileComponent } from './pages/edit-profile/edit-profile.componen
 import { PanierComponent } from './pages/panier/panier.component';
 import { PaiementComponent } from './pages/paiement/paiement.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
-import { NavBatComponent } from './nav-bat/nav-bat.component';
+
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
 
