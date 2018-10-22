@@ -16,12 +16,19 @@ import { PaiementComponent } from './pages/panier/paiement/paiement.component';
 import { DeliveryComponent } from './pages/home-page/delivery/delivery.component';
 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from "@angular/flex-layout"
+
+
+import { RouterModule } from '@angular/router';
+import routes from './routes/routes';
 
 @NgModule({
   declarations: [
@@ -47,7 +54,11 @@ import { FooterComponent } from './footer/footer.component';
     MatCardModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
