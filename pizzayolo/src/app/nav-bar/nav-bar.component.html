@@ -1,3 +1,12 @@
-<p>
-  nav-bar works!
-</p>
+<mat-toolbar>
+  <a [routerLink]="['/homePage']" routerLinkActive="active">Accueil</a> &nbsp;
+  <a [routerLink]="['/aboutUs']" routerLinkActive="active">Présentation</a> &nbsp;
+  <a [routerLink]="['/creationPizza']" routerLinkActive="active">Atelier création</a> &nbsp;
+  <a [routerLink]="['/ourCarte']" routerLinkActive="active">Notre carte</a> &nbsp;
+  <a [routerLink]="['/yourCarte']" routerLinkActive="active">Votre carte</a> &nbsp;
+  <a [routerLink]="['/contact']" routerLinkActive="active">Contact</a> &nbsp;
+  <!-- ICON PROFIL -->
+  <a [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a> &nbsp;
+  <a [routerLink]="['/editProfil']" routerLinkActive="active">Mon profil</a> &nbsp;
+  <a [routerLink]="['/panier']" routerLinkActive="active">ICONE PANIER</a>
+</mat-toolbar>
