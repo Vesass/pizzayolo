@@ -12,17 +12,19 @@ import { Ingredient } from '../../models/ingredient';
 })
 export class CreationPizzaComponent implements OnInit {
 
-  ingredients : Ingredient[];
+  ingredients: any;
 
   constructor(private ingredientService: IngredientService, private router: Router) { }
 
+
+
   ngOnInit()
   {    
-    this.ingredientService.getIngredient()
+   this.ingredientService.getIngredient().subscribe((reponse)=>{
+    //  console.log(reponse);
+    this.ingredients = reponse;
+   },
+   error => console.log(error)
+  );
   }
-  
-  // ingredientInventaire(){
-    // this.ingredientService.getIngredient()
-    //.subscribe((data:Ingredient[]) =>this.ingredients = data)
- // } 
 }

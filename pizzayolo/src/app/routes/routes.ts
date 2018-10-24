@@ -22,8 +22,8 @@ export const routes: Routes = [
     { path: 'panier', component: PanierComponent },
     { path: 'paiement', component: PaiementComponent },
     { path: 'editProfil', component: EditProfileComponent },
-    { path: 'createProfil', component: CreateProfileComponent },
-];
+    { path: 'createProfil', component: CreateProfileComponent }
+]
 
-export default routes;
+// export default routes;
 

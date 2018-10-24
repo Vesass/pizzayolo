@@ -14,15 +14,9 @@ export class IngredientService {
   constructor(private http : HttpClient) { }
   
   getIngredient(){
-    return this.http.get(`${this.apiHost}ingredients`).subscribe((reponse)=>{
-      console.log(reponse); 
-     },
-     error => console.log(error)
-     
-    )
 
+  return this.http.get(`${this.apiHost}ingredients`);
    // .pipe(map(data=>data as Ingredient[]))
   }
   
 }
-
