@@ -30,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { RouterModule } from '@angular/router';
-import routes from './routes/routes';
+import { routes } from './routes/routes';
+
 
 @NgModule({
   declarations: [
