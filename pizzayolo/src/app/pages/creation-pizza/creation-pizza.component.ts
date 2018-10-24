@@ -18,13 +18,12 @@ export class CreationPizzaComponent implements OnInit {
 
 
 
-  ngOnInit()
-  {    
-   this.ingredientService.getIngredient().subscribe((reponse)=>{
-    //  console.log(reponse);
-    this.ingredients = reponse;
-   },
-   error => console.log(error)
-  );
+  ngOnInit() {
+    this.ingredientService.getIngredient().subscribe((reponse) => {
+      //  console.log(reponse);
+      this.ingredients = reponse;
+    },
+      error => console.log(error)
+    );
   }
 }
