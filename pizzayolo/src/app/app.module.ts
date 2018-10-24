@@ -31,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { routes } from './routes/routes';
     PaiementComponent,
     DeliveryComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
