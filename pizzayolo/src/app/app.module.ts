@@ -24,7 +24,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {FlexLayoutModule} from "@angular/flex-layout"
+import { IngredientService } from './services/ingredient.service'
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { RouterModule } from '@angular/router';
@@ -57,10 +59,10 @@ import routes from './routes/routes';
     MatInputModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    FlexLayoutModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

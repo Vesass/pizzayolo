@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { IngredientService } from '../../services/ingredient.service'
+import { Router } from '@angular/router';
+import { Ingredient } from '../../models/ingredient';
+
+
 
 @Component({
   selector: 'app-creation-pizza',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreationPizzaComponent implements OnInit {
 
-  constructor() { }
+  ingredients : Ingredient[];
 
-  ngOnInit() {
+  constructor(private ingredientService: IngredientService, private router: Router) { }
+
+  ngOnInit()
+  {    
+    this.ingredientService.getIngredient()
   }
-
+  
+  // ingredientInventaire(){
+    // this.ingredientService.getIngredient()
+    //.subscribe((data:Ingredient[]) =>this.ingredients = data)
+ // } 
 }
