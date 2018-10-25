@@ -1,3 +1,48 @@
-<p>
-  edit-profile works!
-</p>
+<div class="container">
+
+  <h2>Editer mon profil</h2>
+
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nom d'utilisateur" value="">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Entrer votre mot de passe" [type]="hide ? 'password' : 'text'">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Confirmer votre mot de passe" [type]="hide ? 'password' : 'text'">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nom" value="">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Prénom" value="">
+    </mat-form-field>
+    <div id="adresse">
+      <mat-form-field><input matInput placeholder="Rue" value="">
+      </mat-form-field>
+      <mat-form-field class="adresseInput"><input matInput placeholder="N°" value="">
+      </mat-form-field>
+      <mat-form-field><input matInput placeholder="Boite" value="">
+      </mat-form-field>
+      <mat-form-field class="adresseInput"><input matInput placeholder="Code postal" value="">
+      </mat-form-field>
+      <mat-form-field><input matInput placeholder="Ville" value="">
+      </mat-form-field>
+      <mat-form-field class="adresseInput"><input matInput placeholder="Pays" value="">
+      </mat-form-field>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="Numéro de téléphone" value="">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Adresse mail" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <button mat-stroked-button>Valider</button>
+
+  </form>
+
+
+
+</div>
