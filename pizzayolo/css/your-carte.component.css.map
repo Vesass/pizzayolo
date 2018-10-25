@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/pages/your-carte/your-carte.component.scss"
+    ],
+    "names": [],
+    "file": "your-carte.component.css"
+}

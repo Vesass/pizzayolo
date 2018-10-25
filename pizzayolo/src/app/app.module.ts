@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IngredientService } from './services/ingredient.service'
 import { HttpClientModule } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -68,7 +69,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-
+    MatMenuModule
   ],
   providers: [IngredientService],
   bootstrap: [AppComponent]
