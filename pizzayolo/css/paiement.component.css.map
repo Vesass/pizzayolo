@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/pages/panier/paiement/paiement.component.scss"
+    ],
+    "names": [],
+    "file": "paiement.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../src/app/pages/creation-pizza/creation-pizza.component.scss"
+    ],
+    "names": [],
+    "file": "creation-pizza.component.css"
+}
