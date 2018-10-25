@@ -1,8 +1,6 @@
 // Thème angular material
 
 @import '~@angular/material/theming';
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro'); 
-
 @include mat-core();
 $candy-app-primary: mat-palette($mat-indigo);
 $candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
@@ -10,7 +8,14 @@ $candy-app-warn:    mat-palette($mat-red);
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 @include angular-material-theme($candy-app-theme);
 
+//Font
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro'); 
+
+
+//Global
+
+
 html {
 font-family: 'Maven Pro', sans-serif;
-    
 }
