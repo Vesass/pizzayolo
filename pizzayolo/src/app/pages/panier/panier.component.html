@@ -1,3 +1,33 @@
-<p>
-  panier works!
-</p>
+<div class="container">
+
+  <!-- <button mat-stroked-button>Retour à la carte</button> -->
+
+  <div id="visuPanier">
+    <h3>Panier</h3>
+    <div id="choices">
+      <p>Espace des commandes</p>
+    </div>
+  </div>
+
+  <div id="infosLivraison">
+    <h3>Adresse de livraison</h3>
+    <form>
+      <mat-form-field><input matInput placeholder="Rue" value="">
+      </mat-form-field>
+      <mat-form-field class="adresseInput"><input matInput placeholder="N°" value="">
+      </mat-form-field>
+      <mat-form-field><input matInput placeholder="Boite" value="">
+      </mat-form-field>
+      <mat-form-field class="adresseInput"><input matInput placeholder="Code postal" value="">
+      </mat-form-field>
+      <mat-form-field><input matInput placeholder="Ville" value="">
+      </mat-form-field>
+      <mat-form-field class="adresseInput"><input matInput placeholder="Pays" value="">
+      </mat-form-field>
+      <mat-form-field><input matInput placeholder="Numéro de contact" value="">
+      </mat-form-field>
+      <button mat-stroked-button>Confirmer et payer</button>
+
+    </form>
+  </div>
+</div>
