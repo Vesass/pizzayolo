@@ -37,6 +37,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
 import { LoginComponent } from './login/login.component';
+import { ApiService } from "./services/api.service"
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { LoginComponent } from './login/login.component';
     NavBarComponent,
     FooterComponent,
     LoginComponent
+
   ],
   imports: [
     BrowserModule,
@@ -74,7 +76,7 @@ import { LoginComponent } from './login/login.component';
     MatMenuModule,
     MatIconModule,
   ],
-  providers: [IngredientService],
+  providers: [IngredientService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
