@@ -34,6 +34,9 @@
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
+        <a class="test" [routerLink]="['/login']" routerLinkActive="active">Se connecter</a>
+      </button>
+      <button mat-menu-item>
         <a class="test" [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a>
       </button>
       <button mat-menu-item>

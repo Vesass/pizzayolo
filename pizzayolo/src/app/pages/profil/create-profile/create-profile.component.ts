@@ -31,4 +31,15 @@ export class CreateProfileComponent implements OnInit {
 
   }
 
+  // loginUser(event) {
+  //   const target = event.target;
+  //   const email = target.getElementById("email");
+  //   const firstname = target.getElementById("firstname");
+  //   const password = target.getElementById("password");
+  //   const telephone = target.getElementById("telephone");
+  //   console.log(firstname, email)
+  // }
+
+
+
 }

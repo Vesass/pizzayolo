@@ -8,6 +8,8 @@ import { OurCarteComponent } from './../pages/our-carte/our-carte.component';
 import { CreationPizzaComponent } from './../pages/creation-pizza/creation-pizza.component';
 import { ContactComponent } from './../pages/contact/contact.component';
 import { HomePageComponent } from './../pages/home-page/home-page.component';
+import { AdminComponent } from "./../admin/admin.component";
+import { LoginComponent } from "./../pages/profil/login/login.component";
 import { Routes } from '@angular/router';
 
 
@@ -22,7 +24,9 @@ export const routes: Routes = [
     { path: 'panier', component: PanierComponent },
     { path: 'paiement', component: PaiementComponent },
     { path: 'editProfil', component: EditProfileComponent },
-    { path: 'createProfil', component: CreateProfileComponent }
+    { path: 'createProfil', component: CreateProfileComponent },
+    { path: "admin", component: AdminComponent },
+    { path: "login", component: LoginComponent }
 ]
 
 // export default routes;

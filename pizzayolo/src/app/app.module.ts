@@ -36,8 +36,10 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
-import { LoginComponent } from './login/login.component';
-import { ApiService } from "./services/api.service"
+import { LoginComponent } from './pages/profil/login/login.component';
+import { ApiService } from "./services/api.service";
+import { AdminComponent } from './admin/admin.component';
+
 
 
 @NgModule({
@@ -56,7 +58,8 @@ import { ApiService } from "./services/api.service"
     DeliveryComponent,
     NavBarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
 
   ],
   imports: [
