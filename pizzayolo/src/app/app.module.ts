@@ -19,7 +19,6 @@ import { PanierComponent } from './pages/panier/panier.component';
 import { PaiementComponent } from './pages/panier/paiement/paiement.component';
 import { DeliveryComponent } from './pages/home-page/delivery/delivery.component';
 
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -37,6 +36,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
 import { LoginComponent } from './login/login.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule, MatListModule } from '@angular/material';
 
 
 @NgModule({
@@ -53,9 +55,9 @@ import { LoginComponent } from './login/login.component';
     PanierComponent,
     PaiementComponent,
     DeliveryComponent,
-    NavBarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +75,9 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MatMenuModule,
     MatIconModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [IngredientService],
   bootstrap: [AppComponent]

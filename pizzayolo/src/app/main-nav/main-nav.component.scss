@@ -1,0 +1,41 @@
+.sidenav-container {
+  height: auto;
+  font-family: 'Maven Pro', sans-serif !important;
+    .material-icons{
+      color: white;
+    }
+  .sidenav{
+      width: 150px;
+      display: none;
+  }
+
+  mat-sidenav-content{
+    .mat-toolbar{
+      background-color: black;
+      a {
+        display: inline-block;
+        margin: 0 10px;
+        color: white;
+        text-decoration: none;
+        }
+      }
+      .spacer{
+        flex: 1 1 auto;
+      }
+
+       .mat-menu-item {
+       text-decoration: none;
+       color: black;
+       font-size: 10px;
+       padding: .8em;
+       margin: .2em;
+   }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+ #linkVisible{
+   display: none;
+ }
+}
+
