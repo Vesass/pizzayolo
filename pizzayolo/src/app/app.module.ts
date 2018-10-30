@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCheckboxModule } from '@angular/material'
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
 import { LoginComponent } from './login/login.component';
+import { PanierFlottantComponent } from './pages/panier/panier-flottant/panier-flottant.component';
 
 
 @NgModule({
@@ -55,7 +58,8 @@ import { LoginComponent } from './login/login.component';
     DeliveryComponent,
     NavBarComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    PanierFlottantComponent
   ],
   imports: [
     BrowserModule,
@@ -73,8 +77,13 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MatMenuModule,
     MatIconModule,
+    MatCheckboxModule,
   ],
   providers: [IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+providers: [
+  
+]
