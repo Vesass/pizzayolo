@@ -31,11 +31,18 @@ export class LoginComponent implements OnInit {
   onLogin(user) {
     this.apiService.loginUser(user);
     console.log(user)
+
+    this.apiService.isLogged()
+    this.isLoggedIn(user)
   }
-  isLogged() {
-    console.log("dragon")
-    this.apiService.isLogged().subscribe((reponse) => {
-      //  console.log(reponse);
-    });
+  isLoggedIn(user) {
+    this.apiService.isLogged()
+    setTimeout(this.apiService.isLogged(), 5000);
+
   }
+
+  // isLogged(user) {
+  //   console.log("dragon")
+  //   this.apiService.isLogged(user)
+  // }
 }

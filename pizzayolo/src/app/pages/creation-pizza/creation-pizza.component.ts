@@ -35,6 +35,5 @@ export class CreationPizzaComponent implements OnInit {
       error => console.log(error)
     );
 
-
   }
 }
