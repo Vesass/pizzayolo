@@ -10,24 +10,44 @@
         padding: 10px;
         text-align: center;
     }
+    .selectionIngredients{
+        grid-column-start: 1;
+        h4{
+            margin-top: -5em;
+        }
+    }
     .mat-grid-list{
         max-width: 960px;
         min-width: 600px;
         background-color: rgb(245, 222, 188);
-        padding:  10px ;
+        padding:  6em 10px 10px 10px ;
+        position: relative;
+        .base{
+            position: absolute;
+            width: 100%;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: space-around;
+            padding: 1em 0;
+            margin: -4em -20px 10px -10px;
+            background-color: rgb(235, 158, 96);
+            color: aliceblue;
+            
+        }
         .mat-grid-tile {
             font-size: 12px;
+            
             .mat-figure{
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
-                padding: 0 10px ;
+                padding-left: 5px ;
             }
         }
     }
     #suggestion{
         position: fixed;
-        margin-top: 7%;
+        margin-top: -2em;
         width: 300px;
         height: 350px;
         background-color: lightblue;
