@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Ingredient } from 'src/app/models/ingredient'
-import { map } from 'rxjs/operators'
 
 
 @Injectable({
@@ -16,7 +13,6 @@ export class IngredientService {
   getIngredient(){
 
   return this.http.get(`${this.apiHost}ingredients`);
-   // .pipe(map(data=>data as Ingredient[]))
   }
-  
+
 }

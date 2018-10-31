@@ -1,0 +1,21 @@
+
+#panier{
+    position: fixed;
+    width: 300px;
+    top: 30%;
+    background-color: gray;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    text-align: center;
+    img{
+        width: 60px;
+        height: 40px;
+        margin: 20px auto;
+    }
+
+    .mat-flat-button{
+        width: 100%;
+    }
+}
