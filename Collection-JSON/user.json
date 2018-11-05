@@ -1,0 +1,14 @@
+[
+    {
+    "username":"michmich",
+    "password":"michel69",
+    "name": "Michel",
+    "firstname": "Annick",
+    "streetName": "rue du Jacques",
+    "streetNumber": "69",
+    "box":"5",
+    "zip":"7000",
+    "city": "Mons",
+    "phone": "0478245681" 
+}
+]

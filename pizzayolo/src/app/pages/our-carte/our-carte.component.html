@@ -1,7 +1,21 @@
 <div id="container">
-  <div id="title">
-    <h1>Notre carte</h1>
+  <h1 id="title">Notre carte</h1>
+  <app-panier-flottant id="panier">
+    <div id="suggestion"></div>
+  </app-panier-flottant>
+
+  
+  <div id="carte" *ngFor="let pizza of pizzas">
+    
+    <div id="pizzaName">
+      {{pizza.name}} 
+      <br>
+      <div id="ingredients" *ngFor="let ingredient of pizza.ingredients">
+        {{ingredient.name}}</div>
+        
+      </div>
+      <button mat-flat-button color="warn">+ {{pizza.price}} €</button>
+      
+    </div>
+    
   </div>
-  <div id="panier">Espace pour le panier</div>
-  <div id="menu">Menu</div>
-</div>

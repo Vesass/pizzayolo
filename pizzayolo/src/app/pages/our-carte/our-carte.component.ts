@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PizzaService } from '../../services/pizza.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-our-carte',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurCarteComponent implements OnInit {
 
-  constructor() { }
+  pizzas : any;
+
+  constructor(private pizzaService: PizzaService, private router: Router) { }
 
   ngOnInit() {
+    this.pizzaService.getPizzas().subscribe((reponse) => {
+       console.log(reponse);
+      this.pizzas = reponse;
+    },
+      error => console.log(error)
+    );
+
   }
 
 }
