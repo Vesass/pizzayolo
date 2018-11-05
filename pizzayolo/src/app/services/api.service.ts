@@ -49,5 +49,9 @@ export class ApiService {
 
   }
 
+  logout() {
+    this.loggedIn = false;
+  }
+
 
 }
