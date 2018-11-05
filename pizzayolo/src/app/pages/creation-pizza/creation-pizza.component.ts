@@ -39,13 +39,13 @@ export class CreationPizzaComponent implements OnInit {
 
 
     if (event.checked === true) {
-      this.selected.push(" " +event.source.value);
+      this.selected.push(" " + event.source.value);
       // Ajouter l'ingrédient à l'array
       console.log(this.selected);
     }
 
     else if (event.checked === false) {
-      this.selected = this.selected.filter((ingredient) => { return ingredient !==  " " +event.source.value })
+      this.selected = this.selected.filter((ingredient) => { return ingredient !== " " + event.source.value })
       // Retourne une array avec tous les éléments SAUF celui sur lequel on clique
 
     }
@@ -58,7 +58,7 @@ export class CreationPizzaComponent implements OnInit {
     //MatCheckboxChange {MatCheckbox,checked}
 
     if (event.source.value === "Crème" && event.checked === true) {
-     // Quand on clique sur la crème pour cocher la checkbox
+      // Quand on clique sur la crème pour cocher la checkbox
       this.IsCheckedC = event.source._checked;
       this.IsCheckedT = !this.IsCheckedC;
       // Deux IsChecked, un pour les tomates, un pour la crème
@@ -72,7 +72,7 @@ export class CreationPizzaComponent implements OnInit {
       // Quand on clique sur la crème pour décocher la checkbox
       this.IsCheckedC = event.source._checked;
       this.IsCheckedT = !this.IsCheckedC;
-            // Deux IsChecked, un pour les tomates, un pour la crème
+      // Deux IsChecked, un pour les tomates, un pour la crème
       // Quand l'un est sélectionnné, l'autre est déselectionnné.
       this.selected.unshift("Coulis de tomate");
       // On ajoute le coulis à l'array
@@ -94,7 +94,7 @@ export class CreationPizzaComponent implements OnInit {
       // Quand on clique sur la coulis pour décocher la checkbox
       this.IsCheckedT = event.source._checked;
       this.IsCheckedC = !this.IsCheckedT;
-            // Deux IsChecked, un pour les tomates, un pour la crème
+      // Deux IsChecked, un pour les tomates, un pour la crème
       // Quand l'un est sélectionnné, l'autre est déselectionnné.
       this.selected.unshift("Crème");
       // On ajoute crème à notre array
@@ -117,7 +117,6 @@ export class CreationPizzaComponent implements OnInit {
       this.ingredients = reponse;
     },
       error => console.log(error)
-<<<<<<< HEAD
     );
 
     this.suggestionService.getSuggestions().subscribe((reponse) => {
@@ -126,11 +125,8 @@ export class CreationPizzaComponent implements OnInit {
       error => console.log(error)
     );
 
-=======
-    )
 
     document.getElementById('ingredientsSelected').innerHTML = `${this.selected}`
->>>>>>> 793cd59509c47879cf538ecfffa68352f369ac1d
   }
 
 }
