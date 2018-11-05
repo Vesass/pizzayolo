@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h2>Connectez-vous</h2>
+
+  <form id="formData" #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+    <mat-form-field>
+
+      <input matInput placeholder="Adresse mail" name="email" type="email" required ngModel>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Entrer votre mot de passe" name="password" type="password" ngModel>
+    </mat-form-field>
+
+
+    <button type="submit" value="Login" mat-stroked-button>Valider</button>
+
+
+  </form>

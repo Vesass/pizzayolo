@@ -117,9 +117,20 @@ export class CreationPizzaComponent implements OnInit {
       this.ingredients = reponse;
     },
       error => console.log(error)
+<<<<<<< HEAD
+    );
+
+    this.suggestionService.getSuggestions().subscribe((reponse) => {
+      this.suggestions = reponse;
+    },
+      error => console.log(error)
+    );
+
+=======
     )
 
     document.getElementById('ingredientsSelected').innerHTML = `${this.selected}`
+>>>>>>> 793cd59509c47879cf538ecfffa68352f369ac1d
   }
 
 }
