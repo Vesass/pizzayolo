@@ -17,6 +17,7 @@
     <button mat-menu-item>
       <a [routerLink]="['/yourCarte']" routerLinkActive="active">Votre carte</a>
     </button>
+
     <button mat-menu-item>
       <a [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
     </button>
@@ -33,13 +34,16 @@
       </a>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button *ngIf="!this.apiService.loggedIn" mat-menu-item>
         <a class="test" [routerLink]="['/login']" routerLinkActive="active">Se connecter</a>
       </button>
-      <button mat-menu-item>
+      <button *ngIf="!this.apiService.loggedIn" mat-menu-item>
         <a class="test" [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a>
       </button>
-      <button mat-menu-item>
+      <button *ngIf="!this.apiService.loggedIn" mat-menu-item>
+        <a class="test" [routerLink]="['/login']" routerLinkActive="active">Mon profil</a>
+      </button>
+      <button *ngIf="this.apiService.loggedIn" mat-menu-item>
         <a class="test" [routerLink]="['/editProfil']" routerLinkActive="active">Mon profil</a>
       </button>
     </mat-menu>

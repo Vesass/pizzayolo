@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Validators, FormControl } from '@angular/forms';
 import { ApiService } from './../../../services/api.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -11,6 +12,7 @@ import { ApiService } from './../../../services/api.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  returnURL: string;
 
   hide = true;
 
@@ -23,7 +25,7 @@ export class LoginComponent implements OnInit {
         '';
   }
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, private router: Router, private location: ActivatedRoute) { }
 
   ngOnInit() {
   }
@@ -34,10 +36,27 @@ export class LoginComponent implements OnInit {
 
     this.apiService.isLogged()
     this.isLoggedIn(user)
+
+
+
+    // this.location.replaceState('/'); // clears browser history so they can't navigate with back button
+    //           this.router.navigate(['LoggedoutPage']);
+
+
   }
   isLoggedIn(user) {
     this.apiService.isLogged()
-    setTimeout(this.apiService.isLogged(), 5000);
+    // setTimeout(this.apiService.isLogged(), 5000);
+    if (this.apiService.isLogged()) {
+      console.log("ok")
+      // this.location.replaceState('/'); // clears browser history so they can't navigate with back button
+      // this.router.navigate(['LoggedoutPage']);
+      // window.location.replace("/");
+
+
+    }
+    // this.router.navigateByUrl(this.returnURL)
+
 
   }
 
