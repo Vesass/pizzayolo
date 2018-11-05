@@ -38,7 +38,10 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './pages/profil/login/login.component';
+import { ApiService } from "./services/api.service";
+import { AdminComponent } from './admin/admin.component';
+
 import { PanierFlottantComponent } from './pages/panier/panier-flottant/panier-flottant.component';
 
 
@@ -59,6 +62,8 @@ import { PanierFlottantComponent } from './pages/panier/panier-flottant/panier-f
     NavBarComponent,
     FooterComponent,
     LoginComponent,
+    AdminComponent,
+
     PanierFlottantComponent
   ],
   imports: [
@@ -79,11 +84,11 @@ import { PanierFlottantComponent } from './pages/panier/panier-flottant/panier-f
     MatIconModule,
     MatCheckboxModule,
   ],
-  providers: [IngredientService],
+  providers: [IngredientService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
 providers: [
-  
+
 ]

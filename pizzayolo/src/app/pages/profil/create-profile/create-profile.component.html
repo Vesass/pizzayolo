@@ -1,3 +1,74 @@
-<p>
-  create-profile works!
-</p>
+<div class="container">
+
+  <h2>Créer mon profil</h2>
+
+  <form id="formData" #userData="ngForm" (ngSubmit)="registerUser(userData.value)">
+    <mat-form-field>
+
+      <input matInput placeholder="Adresse mail" name="email" type="email" required ngModel>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Entrer votre mot de passe" name="password" type="password" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Confirmer votre mot de passe" name="password" type="password" ngModel>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Prénom" name="firstname" type="text" ngModel>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Numéro de téléphone" name="telephone" type="number" ngModel>
+    </mat-form-field>
+
+    <button type="submit" value="Register" mat-stroked-button>Valider</button>
+
+  </form>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- <div class="container">
+
+  <h2>Créer mon profil</h2>
+
+
+  <form id="formData" #userData="ngForm" (ngSubmit)="loginUser($event)">
+    <mat-form-field>
+      <input matInput placeholder="Adresse mail" name="email" type="email" required ngModel id="email">
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Entrer votre mot de passe" name="password" type="password" id="password" ngModel>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Confirmer votre mot de passe" name="password" type="password" id="password-conf" ngModel>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Prénom" name="firstname" type="text" id="firstname" ngModel>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Numéro de téléphone" name="telephone" id="telephone" type="number" ngModel>
+    </mat-form-field>
+
+    <button type="submit" value="Register" mat-stroked-button>Valider</button>
+
+
+  </form>
+
+
+
+
+</div> -->

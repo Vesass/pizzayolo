@@ -81,7 +81,10 @@ export class CreationPizzaComponent implements OnInit {
 
     if (event.source.value === "Crème" && event.checked === true) {
       // Quand on clique sur la crème pour cocher la checkbox
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5a10abe3bb3c4c49b113511ed58d604ef8e40703
       this.IsCheckedC = event.source._checked;
       this.IsCheckedT = !this.IsCheckedC;
       // Deux IsChecked, un pour les tomates(IsCheckedT), un pour la crème(IsCheckedC)
@@ -99,7 +102,12 @@ export class CreationPizzaComponent implements OnInit {
 
       this.IsCheckedC = event.source._checked;
       this.IsCheckedT = !this.IsCheckedC;
+<<<<<<< HEAD
 
+=======
+      // Deux IsChecked, un pour les tomates, un pour la crème
+      // Quand l'un est sélectionnné, l'autre est déselectionnné.
+>>>>>>> 5a10abe3bb3c4c49b113511ed58d604ef8e40703
       this.selected.unshift("Coulis de tomate");
       // On ajoute le coulis à l'array
 
@@ -124,7 +132,12 @@ export class CreationPizzaComponent implements OnInit {
       // Quand on clique sur la coulis pour décocher la checkbox
       this.IsCheckedT = event.source._checked;
       this.IsCheckedC = !this.IsCheckedT;
+<<<<<<< HEAD
 
+=======
+      // Deux IsChecked, un pour les tomates, un pour la crème
+      // Quand l'un est sélectionnné, l'autre est déselectionnné.
+>>>>>>> 5a10abe3bb3c4c49b113511ed58d604ef8e40703
       this.selected.unshift("Crème");
       // On ajoute crème à notre array
 
@@ -142,12 +155,29 @@ export class CreationPizzaComponent implements OnInit {
 
   ////////////////////// GESTION DES SUGGESTIONS ///////////////////////////////
 
+<<<<<<< HEAD
   OnChangeSugg(event){
     
     if (event.checked === true) {
       // console.log(event.source.value)
       
       this.suggestion = this.selected
+=======
+  ngOnInit() {
+    this.ingredientService.getIngredient().subscribe((reponse) => {
+      console.log(reponse);
+      this.ingredients = reponse;
+    },
+      error => console.log(error)
+    );
+
+    this.suggestionService.getSuggestions().subscribe((reponse) => {
+      this.suggestions = reponse;
+    },
+      error => console.log(error)
+    );
+
+>>>>>>> 5a10abe3bb3c4c49b113511ed58d604ef8e40703
 
 
       document.getElementById('listSugg').innerHTML = `${this.suggestion}`

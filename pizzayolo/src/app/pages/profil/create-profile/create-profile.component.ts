@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators, FormControl } from '@angular/forms';
+import { ApiService } from './../../../services/api.service';
 
 @Component({
   selector: 'app-create-profile',
@@ -7,9 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateProfileComponent implements OnInit {
 
-  constructor() { }
+
+  hide = true;
+
+  email = new FormControl('', [Validators.required, Validators.email]);
+
+
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'You must enter a value' :
+      this.email.hasError('email') ? 'Not a valid email' :
+        '';
+  }
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
   }
+
+  registerUser(user) {
+    this.apiService.registerUser(user);
+
+  }
+
+  // loginUser(event) {
+  //   const target = event.target;
+  //   const email = target.getElementById("email");
+  //   const firstname = target.getElementById("firstname");
+  //   const password = target.getElementById("password");
+  //   const telephone = target.getElementById("telephone");
+  //   console.log(firstname, email)
+  // }
+
+
 
 }
