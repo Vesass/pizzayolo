@@ -14,25 +14,18 @@
     <br>
     <mat-grid-list cols="4" rowHeight="6:1">
         <section class="base">
-                Choisissez une base: <br>
-            <mat-checkbox color="warn" 
-                          (change)="OnChangeBase($event)" 
-                          [(ngModel)]="IsCheckedT"
-                          value="Coulis de tomate">
+            Choisissez une base: <br>
+            <mat-checkbox color="warn" (change)="OnChangeBase($event)" [(ngModel)]="IsCheckedT" value="Coulis de tomate">
                 Coulis de tomate
             </mat-checkbox>
-            <mat-checkbox color="warn" 
-                          (change)="OnChangeBase($event)"
-                          [(ngModel)]="IsCheckedC"
-                          value="Crème">
+            <mat-checkbox color="warn" (change)="OnChangeBase($event)" [(ngModel)]="IsCheckedC" value="Crème">
                 Crème
             </mat-checkbox>
         </section>
         <mat-grid-tile class="ingredientsList" *ngFor="let ingredient of ingredients">
             <figure class="mat-figure">
-                <mat-checkbox color="warn"
-                              value="{{ingredient.name}}"
-                              (change)="OnChange($event)">
+                <mat-checkbox color="warn" value="{{ingredient.name}}" (change)="OnChange($event)" (change)="OnChangeSugg($event)">
+
                     {{ingredient.name}} - {{ingredient.price}}€
                 </mat-checkbox>
             </figure>
@@ -42,7 +35,10 @@
         <app-panier-flottant></app-panier-flottant>
         <div id="suggestion">
             <h2>Suggestions</h2>
-            <div id="listSugg"></div>
+            <div id="listSugg" *ngFor="let suggestion of suggestions">
+                <div id="ingSugg" *ngFor="let ingredient of suggestion.ingredients">
+                    {{ingredient.name}}</div>
+            </div>
         </div>
     </div>
 </div>
