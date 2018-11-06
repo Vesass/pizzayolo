@@ -1,38 +1,25 @@
 .container{
     margin: auto 100px;
     height: 798px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+    width: 960px;
     
 
-    #titreVotreCarte{
-        background-color: grey;
+     #title{
+        background-color: rgb(216, 79, 79);
         text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-
-    }
+        margin: 0;
+        line-height: 119px;
+        }
 
     #top3{
         background-color: rgb(83, 83, 83);
         text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-
     }
 
     #menu{
         background-color: lightgrey;
         text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-    #panier{
-        background-color: rgb(199, 199, 199);
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 4;
+      
     }
 }
