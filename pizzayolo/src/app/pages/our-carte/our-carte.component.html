@@ -1,35 +1,27 @@
-<!-- <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
 
+
+<div id="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
 
   <div id="content" fxFlex="70%">
-    <div id="title">
-      <h1>Notre carte</h1>
-    </div>
-    <div id="menu">Menu</div>
-  </div>
 
-  <div id="panier" fxFlex="30%">Espace pour le panier</div>
+    <h1 id="title">Notre carte</h1>
 
-</div> -->
-
-<div id="container">
-  <h1 id="title">Notre carte</h1>
-  <app-panier-flottant id="panier">
-    <div id="suggestion"></div>
-  </app-panier-flottant>
-
-
-  <div id="carte" *ngFor="let pizza of pizzas">
-
-    <div id="pizzaName">
+    <div id="carte" *ngFor="let pizza of pizzas">
+      <div id="pizzaName">
       {{pizza.name}}
       <br>
       <div id="ingredients" *ngFor="let ingredient of pizza.ingredients">
         {{ingredient.name}}</div>
-
     </div>
-    <button mat-flat-button color="warn">+ {{pizza.price}} €</button>
 
+    <button mat-flat-button color="warn">+ {{pizza.price}} €</button>
+    
   </div>
+
+</div>
+
+<app-panier-flottant id="panier" fxFlex="30%">
+    <div id="suggestion"></div>
+</app-panier-flottant>
 
 </div>

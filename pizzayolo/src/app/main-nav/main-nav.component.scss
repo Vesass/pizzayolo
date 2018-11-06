@@ -1,27 +1,36 @@
-.sidenav-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.sidenav-container{
+  height: 100%;
+}
 
+.sidenav{
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+  background-color: lightgrey;
+}
 
-    .material-icons{
-      color: white;
-    }
-    .sidenav{
-      width: 150px;
-      display: none;
-    }
-    
+#sideMenu{
+  background-color: rgb(58, 58, 58) !important;
+}
 
-    mat-sidenav-content{
-    .mat-toolbar{
+.hidden {
+  display: none;
+}
+
+#hamburger{
+  color: white;
+}
+
+mat-sidenav-content{
+ 
+  .mat-toolbar{
+     position: fixed;
+      top:0;
       background-color: rgb(58, 58, 58);
       a {
         display: inline-block;
         margin: 0 10px;
         color: white;
         text-decoration: none;
-        font-family: 'Maven Pro', sans-serif !important;
         font-size: 0.7em !important;
         }
       }
@@ -36,9 +45,8 @@
        margin: .2em;
    }
   }
-}
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 600px) {
  #linkVisible{
    display: none;
  }

@@ -1,67 +1,27 @@
 
-// .container{    
-//     margin: auto 100px;
-//     height: 798px;
-//     // display: grid;
-//     // grid-gap: 10px;
-//     // grid-template-columns: 1fr 1fr;}
 #container{
+    margin: auto 100px;
+    height: 798px;
+    padding-top: 50px;
     width: 960px;
-    margin: 10px auto;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 660px 300px;
-    // background-color: lightgreen;
-    
     #title{
-//         height: 50px;
-//         background-color: gray;
-//         text-align: center;
-//         // grid-column-start: 1;
-//         // grid-column-end: 2;
-
-//     }
-//     #menu{
-//         height: 500px;
-//         background-color: lightgrey;
-//         // grid-column-start: 1;
-//         // grid-column-end: 2;
-//     }
-//     #panier{
-//         background-color: lightpink;
-//         // grid-column-start: 2;
-//         // grid-column-end: 3;
-//         // grid-row-start: 1;
-//         // grid-row-end: 3;
-//     }
-// }
         background-color: rgb(216, 79, 79);
         text-align: center;
-        // grid-column-start: 1;
-        // grid-column-end: 2;
-        // height: 50px;
         margin: 0;
         line-height: 119px;
-}
-    
-    
+        }
     #carte{
         padding: 10px;
-        grid-column-start: 1;
-        grid-column-end: 2;
         background-color: lightblue;
         display: flex;
         justify-content: space-between;
         height: auto;
         #pizzaName{
             background-color: lightgrey;
-                // height: 50px;
-                // padding: 10px;
                 font-weight: bolder;
                 font-size: 1.5em;
                 width: 100%;
             }
-
             #ingredients{
                 display: inline;
                 margin-right: 9px;
@@ -69,14 +29,11 @@
                 font-weight: normal;
                 font-size: 14px
             }
-
             .mat-flat-button{
-                // float: right;
                 line-height: 30px;
                 width: 80px;
                 height: 30px;
                 margin: auto 2%;
-                // margin-top: -14px;
             }
 
         }
