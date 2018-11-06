@@ -25,7 +25,10 @@
     <!-- <a [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a> -->
     <!-- <a [routerLink]="['/editProfil']" routerLinkActive="active">Mon profil</a> -->
 
-    <button class="button-ap" mat-button [matMenuTriggerFor]="menu">
+    <button *ngIf="!this.apiService.loggedIn" class="button-ap" mat-button [matMenuTriggerFor]="menu">
+      <img src="../../assets/image/avatar-full-blanc.png" style="width: 25px; height: auto; padding-bottom: 5px;" alt="logo avatar">
+    </button>
+    <button *ngIf="this.apiService.loggedIn" class="button-ap" mat-button [matMenuTriggerFor]="menu">
       <img src="../../assets/image/avatar-blanc.png" style="width: 25px; height: auto; padding-bottom: 5px;" alt="logo avatar">
     </button>
     <button class="button-ap" mat-menu-item>
@@ -44,7 +47,10 @@
         <a class="test" [routerLink]="['/login']" routerLinkActive="active">Mon profil</a>
       </button>
       <button *ngIf="this.apiService.loggedIn" mat-menu-item>
-        <a class="test" [routerLink]="['/editProfil']" routerLinkActive="active">Mon profil</a>
+        <a class="test" [routerLink]="['/editProfil']" routerLinkActive="active">Modifier profil</a>
+      </button>
+      <button *ngIf="this.apiService.loggedIn" mat-menu-item>
+        <a class="test" (click)="onLogout($event)">Se déconnecter</a>
       </button>
     </mat-menu>
   </div>
