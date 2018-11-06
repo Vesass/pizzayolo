@@ -1,1 +1,20 @@
-/* No CSS *//*# sourceMappingURL=edit-profile.component.css.map */
+h2 {
+  text-align: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  margin: 20px auto;
+}
+
+form .adresseInput {
+  float: right;
+}
+/*# sourceMappingURL=edit-profile.component.css.map */

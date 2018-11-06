@@ -1,4 +1,59 @@
-.container{
-    margin: auto 100px;
-    height: 798px;
+#container{
+    width: 960px;
+    margin: 10px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 660px 300px;
+    #enTete{
+        background-color: rgb(134, 76, 28);
+        color: aliceblue;
+        padding: 10px;
+        text-align: center;
+    }
+    .selectionIngredients{
+        grid-column-start: 1;
+        h4{
+            margin-top: -5em;
+        }
+    }
+    .mat-grid-list{
+        max-width: 960px;
+        min-width: 600px;
+        background-color: rgb(245, 222, 188);
+        padding:  6em 10px 10px 10px ;
+        position: relative;
+        .base{
+            position: absolute;
+            width: 100%;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: space-around;
+            padding: 1em 0;
+            margin: -4em -20px 10px -10px;
+            background-color: rgb(235, 158, 96);
+            color: aliceblue;
+            
+        }
+        .mat-grid-tile {
+            font-size: 12px;
+            
+            .mat-figure{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-left: 5px ;
+            }
+        }
+    }
+    #suggestion{
+        position: fixed;
+        margin-top: -2em;
+        width: 300px;
+        height: 350px;
+        background-color: lightblue;
+        text-align: center;
+        h2{
+            padding-top: 10px
+        }
+    }
 }

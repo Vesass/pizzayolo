@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCheckboxModule } from '@angular/material'
 
 
 
@@ -37,52 +38,63 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
-import { LoginComponent } from './login/login.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule, MatListModule } from '@angular/material';
+import { LoginComponent } from './pages/profil/login/login.component';
+import { ApiService } from "./services/api.service";
+import { AdminComponent } from './admin/admin.component';
+
+import { PanierFlottantComponent } from './pages/panier/panier-flottant/panier-flottant.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    AboutUsComponent,
-    OurCarteComponent,
-    YourCarteComponent,
-    CreationPizzaComponent,
-    ContactComponent,
-    CreateProfileComponent,
-    EditProfileComponent,
-    PanierComponent,
-    PaiementComponent,
-    DeliveryComponent,
-    FooterComponent,
-    LoginComponent,
-    MainNavComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    BrowserAnimationsModule,
-    MatGridListModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatMenuModule,
-    MatIconModule,
-    LayoutModule,
-    MatSidenavModule,
-    MatListModule,
-    FlexLayoutModule
-  ],
-  providers: [IngredientService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomePageComponent,
+        AboutUsComponent,
+        OurCarteComponent,
+        YourCarteComponent,
+        CreationPizzaComponent,
+        ContactComponent,
+        CreateProfileComponent,
+        EditProfileComponent,
+        PanierComponent,
+        PaiementComponent,
+        DeliveryComponent,
+        FooterComponent,
+        LoginComponent,
+        MainNavComponent,
+        AdminComponent,
+        PanierFlottantComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatGridListModule,
+        RouterModule.forRoot(routes),
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatMenuModule,
+        MatIconModule,
+        LayoutModule,
+        MatSidenavModule,
+        MatListModule,
+        FlexLayoutModule,
+        MatCheckboxModule,
+    ],
+    providers: [IngredientService, ApiService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+providers: [
+
+]

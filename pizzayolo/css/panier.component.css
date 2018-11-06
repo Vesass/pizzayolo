@@ -1,1 +1,46 @@
-/* No CSS *//*# sourceMappingURL=panier.component.css.map */
+.container {
+  width: 960px;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container h3 {
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.container #visuPanier {
+  width: 400px;
+  text-align: center;
+}
+
+.container #visuPanier #choices {
+  background-color: lightgrey;
+  width: 400px;
+  height: 400px;
+}
+
+.container #infosLivraison {
+  text-align: center;
+  width: 400px;
+}
+
+.container #infosLivraison form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=panier.component.css.map */
