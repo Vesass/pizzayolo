@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCheckboxModule } from '@angular/material'
 
 
@@ -21,7 +22,6 @@ import { PanierComponent } from './pages/panier/panier.component';
 import { PaiementComponent } from './pages/panier/paiement/paiement.component';
 import { DeliveryComponent } from './pages/home-page/delivery/delivery.component';
 
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -38,6 +38,9 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { RouterModule } from '@angular/router';
 import { routes } from './routes/routes';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule, MatListModule } from '@angular/material';
 import { LoginComponent } from './pages/profil/login/login.component';
 import { ApiService } from "./services/api.service";
 import { AdminComponent } from './admin/admin.component';
@@ -46,46 +49,49 @@ import { PanierFlottantComponent } from './pages/panier/panier-flottant/panier-f
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomePageComponent,
-    AboutUsComponent,
-    OurCarteComponent,
-    YourCarteComponent,
-    CreationPizzaComponent,
-    ContactComponent,
-    CreateProfileComponent,
-    EditProfileComponent,
-    PanierComponent,
-    PaiementComponent,
-    DeliveryComponent,
-    NavBarComponent,
-    FooterComponent,
-    LoginComponent,
-    AdminComponent,
-
-    PanierFlottantComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    BrowserAnimationsModule,
-    MatGridListModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatCheckboxModule,
-  ],
-  providers: [IngredientService, ApiService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomePageComponent,
+        AboutUsComponent,
+        OurCarteComponent,
+        YourCarteComponent,
+        CreationPizzaComponent,
+        ContactComponent,
+        CreateProfileComponent,
+        EditProfileComponent,
+        PanierComponent,
+        PaiementComponent,
+        DeliveryComponent,
+        FooterComponent,
+        LoginComponent,
+        MainNavComponent,
+        AdminComponent,
+        PanierFlottantComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        MatGridListModule,
+        RouterModule.forRoot(routes),
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatMenuModule,
+        MatIconModule,
+        LayoutModule,
+        MatSidenavModule,
+        MatListModule,
+        FlexLayoutModule,
+        MatCheckboxModule,
+    ],
+    providers: [IngredientService, ApiService],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
 

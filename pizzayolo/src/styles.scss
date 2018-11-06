@@ -15,7 +15,14 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 
 //Global
 
+body {
+font-family: 'Maven Pro', sans-serif !important;
+background-color: red;
+margin: 0;
+}
 
-html {
-font-family: 'Maven Pro', sans-serif;
+
+.container {  
+    background-color: lightblue;
+    height: auto;
 }
