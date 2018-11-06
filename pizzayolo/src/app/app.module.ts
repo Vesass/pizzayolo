@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -78,6 +80,7 @@ import { MatSidenavModule, MatListModule } from '@angular/material';
     LayoutModule,
     MatSidenavModule,
     MatListModule,
+    FlexLayoutModule
   ],
   providers: [IngredientService],
   bootstrap: [AppComponent]
