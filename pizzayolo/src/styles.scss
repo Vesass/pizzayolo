@@ -61,6 +61,7 @@ h1{
 
 @media screen and (max-width: 601px){
 
+   
     h1{
         background-color: $main-color-red;
         margin-right: auto; 
@@ -71,6 +72,12 @@ h1{
         height: 120px;
         line-height: 120px;
     }
+
+     .container {  
+        margin: 20px 50px 100px 50px;
+        height: auto;
+}
+    
 
 }
 
