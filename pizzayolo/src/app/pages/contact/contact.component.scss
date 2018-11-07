@@ -1,18 +1,46 @@
 
 
 .container{
-    // margin: 100px 100px;
-    // height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.151);
-    border-radius: 5px;
-    mat-form-field{
-        width: 500px;
-    };
-    button{
-        margin-top: 50px;
-        margin-bottom: 20px;
+    margin-top: 35px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    //le code ci dessus prend le dessus sur style.scss
+
+    h1{
+        background-color: rgb(216, 79, 79);
+        margin-right: auto; 
+        margin-left:  auto; 
+        width: 100%;
+        text-align: center;
+        height: 120px;
+        line-height: 120px;
     }
+    
+    p{
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        width: 400px;
+    }
+    
+    form{
+        width: 700px;
+        // background-color: lightgreen;
+       input{
+            // width: 100% !important;
+        }
+    };
+  
+   
 }
+
+.wrapper{
+        margin-top: 50px;
+        height: 200px;
+        margin-right: auto; 
+        margin-left:  auto; 
+        width: 100%;
+    }
+
+
