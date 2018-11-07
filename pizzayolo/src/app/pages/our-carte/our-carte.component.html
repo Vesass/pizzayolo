@@ -1,11 +1,10 @@
+<h1>Notre carte</h1>
 
 
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
 
   <div id="content" fxFlex="70%">
-
-    <h1 id="title">Notre carte</h1>
-
+  
     <div id="carte" *ngFor="let pizza of pizzas">
       <div id="pizzaName">
       {{pizza.name}}

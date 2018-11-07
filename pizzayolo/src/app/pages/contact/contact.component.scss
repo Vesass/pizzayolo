@@ -1,21 +1,11 @@
 
 
 .container{
-    margin-top: 35px;
+    margin-top: 30px;
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 0;
     //le code ci dessus prend le dessus sur style.scss
-
-    h1{
-        background-color: rgb(216, 79, 79);
-        margin-right: auto; 
-        margin-left:  auto; 
-        width: 100%;
-        text-align: center;
-        height: 120px;
-        line-height: 120px;
-    }
     
     p{
         padding: 10px;
@@ -32,15 +22,15 @@
         }
     };
   
-   
-}
-
-.wrapper{
-        margin-top: 50px;
+   .wrapper{
+        margin-top: 20px;
         height: 200px;
         margin-right: auto; 
         margin-left:  auto; 
         width: 100%;
     }
+
+}
+
 
 
