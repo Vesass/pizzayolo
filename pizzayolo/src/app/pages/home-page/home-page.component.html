@@ -1,7 +1,12 @@
 <div class="container">
 <header>
     <img src="" alt="">
-    <p>Adresse - numéro de tél</p>
+    <ul>
+    <li>Rue d'Havré, 18</li>
+    <li>7000 - Mons (BE)</li>
+    <li>065/57.66.41</li>
+    </ul>
+    
     <div id="concept">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorum perspiciatis! Minima in dolore,
             esse vitae similique praesentium, temporibus odit aspernatur eaque commodi quod porro nemo deleniti id
@@ -12,13 +17,7 @@
 </header>
 
 <section id="delivery">
-    <div id="deliveryInformations">
-        <mat-form-field appearance="outline">
-            <mat-label>Entrez votre code postal</mat-label>
-            <input type="text" matInput placeholder="Votre code postal">
-            <button mat-stroked-button>Soumettre</button>
-        </mat-form-field>
-    </div>
+<app-delivery></app-delivery>
 </section>
 
 <section id="main">
