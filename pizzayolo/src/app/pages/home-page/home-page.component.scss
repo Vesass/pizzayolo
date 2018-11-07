@@ -1,14 +1,69 @@
 
 .container{
-    // margin: auto 100px;
-    // height: 798px;
+    //rappel : le style du container se trouve dans style.scss
+    header {
+        // background-color: lightpink;
+        img{
+            display: block;
+            width: 100px;
+            height: auto;
+            margin: 20px auto;
+            padding-top: 25px;
+        }
+        ul{
+            text-align: center;
+            font-weight: bold;
+        }
+        #concept{
+            padding-bottom: 5px;
+            p{
+                text-align: center;
+                // width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+        }
+    }
+
+    #delivery{
+        // height: auto;
+    }
+
+    #main{
+
+        h2{
+            text-transform: uppercase;
+        }
+
+        a{
+            background-color: rgb(58, 58, 58);
+            display: block;
+            width: 400px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            &:hover{
+                background-color: lightgrey;
+                transition: 0.5s;
+                color: black;
+            }
+        }
+        #mainContent{
+            margin-top: 5px;
+            .pizzas{
+                background-color: lightgrey;
+                width: 300px;
+                height: 100px;
+                //à changer en fonction des datas
+                p{
+                    text-align: center;
+                }
+            }
+            
+        }
+
+    }
 }
 
 
-header {
-    background-color: lightpink;
-}
-
-#delivery{
-    background-color: lightblue;
-}
