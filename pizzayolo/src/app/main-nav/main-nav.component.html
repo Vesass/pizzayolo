@@ -44,34 +44,30 @@
         <a mat-list-item [routerLink]="['/ourCarte']" routerLinkActive="active">Notre carte</a>
         <a mat-list-item [routerLink]="['/yourCarte']" routerLinkActive="active">Votre carte</a>
         <a mat-list-item [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
-   <button *ngIf="!this.apiService.loggedIn" class="button-ap" mat-button [matMenuTriggerFor]="menu">
-      <img src="../../assets/image/avatar-full-blanc.png" style="width: 25px; height: auto; padding-bottom: 5px;" alt="logo avatar">
-    </button>
-    <button *ngIf="this.apiService.loggedIn" class="button-ap" mat-button [matMenuTriggerFor]="menu">
-      <img src="../../assets/image/avatar-blanc.png" style="width: 25px; height: auto; padding-bottom: 5px;" alt="logo avatar">
-    </button>
-    <button class="button-ap" mat-menu-item>
-      <a [routerLink]="['/panier']" routerLinkActive="active">
-        <img src="../../assets/image/chariot.png" style=" width: 25px; height: auto; padding-top: 14px;" alt="logo panier">
-      </a>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button *ngIf="!this.apiService.loggedIn" mat-menu-item>
+        <button class="button-ap" mat-button [matMenuTriggerFor]="menu">
+          <img src="../../assets/image/avatar-blanc.png" style="width: 25px; height: auto; padding-bottom: 5px;" alt="logo avatar">
+        </button>
+
+        <a mat-list-item [routerLink]="['/panier']" routerLinkActive="active">
+          <img src="../../assets/image/chariot.png" style=" width: 25px; height: auto; padding-top: 14px;" alt="logo panier">
+        </a>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
         <a class="test" [routerLink]="['/login']" routerLinkActive="active">Se connecter</a>
       </button>
-      <button *ngIf="!this.apiService.loggedIn" mat-menu-item>
+      <button mat-menu-item>
         <a class="test" [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a>
       </button>
-      <button *ngIf="!this.apiService.loggedIn" mat-menu-item>
+      <button mat-menu-item>
         <a class="test" [routerLink]="['/login']" routerLinkActive="active">Mon profil</a>
       </button>
-      <button *ngIf="this.apiService.loggedIn" mat-menu-item>
+      <button mat-menu-item>
         <a class="test" [routerLink]="['/editProfil']" routerLinkActive="active">Modifier profil</a>
       </button>
-      <button *ngIf="this.apiService.loggedIn" mat-menu-item>
+      <button mat-menu-item>
         <a class="test" (click)="onLogout($event)">Se déconnecter</a>
       </button>
-    </mat-menu> 
+        </mat-menu>
       </div>
     </mat-toolbar>
     <!-- CONTENU DU SITE CI DESSOUS -->
