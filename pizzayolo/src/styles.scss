@@ -48,15 +48,15 @@ li {
 }
 
 h1{
-
+//le style ici est temporaire, ça permet juste de se rendre compte de la place qu'il prend
         background-color: $main-color-red;
         margin-right: auto; 
         margin-left:  auto; 
         width: 100%;
         margin-top: 64px;
         text-align: center;
-        height: 120px;
-        line-height: 120px;
+        height: 50px;
+        line-height: 50px;
     }
 
 @media screen and (max-width: 601px){
