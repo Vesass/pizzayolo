@@ -17,7 +17,7 @@ export class OurCarteComponent implements OnInit {
 
   ngOnInit() {
     this.pizzaService.getPizzas().subscribe((reponse) => {
-       console.log(reponse);
+      console.log(reponse);
       this.pizzas = reponse;
     },
       error => console.log(error)

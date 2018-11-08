@@ -46,7 +46,6 @@ export class ApiService {
   isLogged() {
     return this.loggedIn
 
-
   }
 
   logout() {
