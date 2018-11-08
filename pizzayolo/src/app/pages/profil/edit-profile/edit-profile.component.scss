@@ -1,13 +1,18 @@
-h2 {
-    text-align: center;
-}
+.container{
+    // margin: auto 100px;
+    // height: 798px;
 
 form {
     display: flex;
     flex-direction: column;
     width: 500px;
     margin: 20px auto;
-    .adresseInput{
+    .adresseInput
+    {
         float: right;    
         }
+
 }
+}
+
+
