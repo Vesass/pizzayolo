@@ -52,6 +52,79 @@ export class CreationPizzaComponent implements OnInit {
     )
     
   }
+  
+  
+    //////////////////////// GESTION DU CHANGEMENT DE LA BASE ////////////////////
+  
+    OnChangeBase(event) {
+  
+      console.log(event.source);
+      
+  
+      if (event.source.value === "Crème" && event.checked === true) {
+        // Quand on clique sur la crème pour cocher la checkbox      
+  
+        this.IsCheckedC = event.source._checked;
+        this.IsCheckedT = !this.IsCheckedC;
+        // Deux IsChecked, un pour les tomates(IsCheckedT), un pour la crème(IsCheckedC)
+        // Quand l'un est sélectionné, l'autre est déselectionné.
+  
+        this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Coulis de tomate" })
+        // On supprime le coulis de l'array
+  
+        this.ingName.unshift("Crème");
+        // On supprime la crème de l'array
+      }
+  
+      else if (event.source.value === "Crème" && event.checked === false) {
+        // Quand on clique sur la crème pour décocher la checkbox
+  
+  
+        this.IsCheckedC = event.source._checked;
+        this.IsCheckedT = !this.IsCheckedC;
+  
+        this.ingName.unshift("Coulis de tomate");
+        // On ajoute le coulis à l'array
+  
+        this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Crème" })
+        // On supprime la crème de l'array
+      }
+  
+      else if (event.source.value === "Coulis de tomate" && event.checked === true) {
+        // Quand on clique sur le coulis pour cocher la checkbox
+  
+  
+        this.IsCheckedT = event.source._checked;
+        this.IsCheckedC = !this.IsCheckedT;
+  
+        this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Crème" })
+        // On supprime la crème de l'array
+  
+        this.ingName.unshift("Coulis de tomate");
+        // on ajoute le coulis à l'array
+      }
+  
+      else {
+        this.IsCheckedT = event.source._checked;
+        this.IsCheckedC = !this.IsCheckedT;
+  
+        this.ingName.unshift("Crème");
+        // On ajoute crème à notre array
+  
+        this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Coulis de tomate" })
+  
+        
+        // On supprime le coulis de l'array
+      }
+  
+      
+      document.getElementById('ingredientsSelected').innerHTML = `${this.ingName}`
+      // console.log(this.IsCheckedC)
+      // console.log(this.IsCheckedT);
+    }
+
+
+
 
   //////////////////////// GESTION D'AJOUT DES INGREDIENTS ////////////////////
 
@@ -60,95 +133,28 @@ export class CreationPizzaComponent implements OnInit {
     if (event.checked === true) {
       this.ingName.push(" " + event.source.name);
       this.selected.push(event.source.value);
-      console.log(event);
-      
       // Ajouter l'ingrédient à l'array
     }
 
     else if (event.checked === false) {
-      this.ingName = this.ingName.filter((ingredient) => { return ingredient !== " " + event.source.name })
+      this.ingName = this.ingName.filter((ingredient) => { return ingredient !== " " + event.source.name })     
+      this.selected = this.selected.filter((id) => { return id !== event.source.value })
       // Retourne une array avec tous les éléments SAUF celui sur lequel on clique
 
     }
     document.getElementById('ingredientsSelected').innerHTML = `${this.ingName}`
+    console.log(this.ingName)
     // Affichage HTML
   }
 
-  //////////////////////// GESTION DU CHANGEMENT DE LA BASE ////////////////////
 
-  OnChangeBase(event) {
-
-    console.log(event.source);
-    
-
-    if (event.source.value === "Crème" && event.checked === true) {
-      // Quand on clique sur la crème pour cocher la checkbox      
-
-      this.IsCheckedC = event.source._checked;
-      this.IsCheckedT = !this.IsCheckedC;
-      // Deux IsChecked, un pour les tomates(IsCheckedT), un pour la crème(IsCheckedC)
-      // Quand l'un est sélectionné, l'autre est déselectionné.
-
-      this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Coulis de tomate" })
-      // On supprime le coulis de l'array
-
-      this.ingName.unshift("Crème");
-      // On supprime la crème de l'array
-    }
-
-    else if (event.source.value === "Crème" && event.checked === false) {
-      // Quand on clique sur la crème pour décocher la checkbox
-
-
-      this.IsCheckedC = event.source._checked;
-      this.IsCheckedT = !this.IsCheckedC;
-
-      this.ingName.unshift("Coulis de tomate");
-      // On ajoute le coulis à l'array
-
-      this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Crème" })
-      // On supprime la crème de l'array
-    }
-
-    else if (event.source.value === "Coulis de tomate" && event.checked === true) {
-      // Quand on clique sur le coulis pour cocher la checkbox
-
-
-      this.IsCheckedT = event.source._checked;
-      this.IsCheckedC = !this.IsCheckedT;
-
-      this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Crème" })
-      // On supprime la crème de l'array
-
-      this.ingName.unshift("Coulis de tomate");
-      // on ajoute le coulis à l'array
-    }
-
-    else {
-      this.IsCheckedT = event.source._checked;
-      this.IsCheckedC = !this.IsCheckedT;
-
-      this.ingName.unshift("Crème");
-      // On ajoute crème à notre array
-
-      this.ingName = this.ingName.filter((ingredient) => { return ingredient !== "Coulis de tomate" })
-
-      
-      // On supprime le coulis de l'array
-    }
-
-    
-    document.getElementById('ingredientsSelected').innerHTML = `${this.ingName}`
-    // console.log(this.IsCheckedC)
-    // console.log(this.IsCheckedT);
-  }
 
   ////////////////////// GESTION DES SUGGESTIONS ///////////////////////////////
 
   OnChangeSugg(event){
 
     
-    if (event.checked === true) {
+    if (event.checked === true || event.checked === false) {
 
       this.suggestionService.getRequest(this.selected).subscribe((reponse) => {
         console.log(reponse);
@@ -159,12 +165,12 @@ export class CreationPizzaComponent implements OnInit {
 
 
     // console.log(event.source.name)
-      // this.suggestions.forEach(suggestion => {
-      //   suggestion.ingredients.forEach(ingredient => {
-      //     if (ingredient = this.selected)
+    //   this.suggestions.forEach(suggestion => {
+    //     suggestion.ingredients.forEach(ingredient => {
+    //       if (ingredient = this.selected)
           
-      //   })
-      //  });
+    //     })
+    //    });
 
 
 

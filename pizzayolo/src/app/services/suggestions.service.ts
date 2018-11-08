@@ -14,9 +14,8 @@ export class SuggestionsService {
   }
 
   getRequest(ingredientArray){
-    console.log(ingredientArray);
-
-
+    // console.log(ingredientArray);
+    
     // Convertir le tableau en objet Json
     return this.http.get(`${this.apiHost}suggestions`, { params: { ingredients : ingredientArray}})
     
