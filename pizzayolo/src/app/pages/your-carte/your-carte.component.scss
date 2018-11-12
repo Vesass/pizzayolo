@@ -4,13 +4,27 @@
     // padding-top: 50px;
     // width: 960px;
     #top3{
-        background-color: rgb(83, 83, 83);
+        h2{
+            padding: 10px;
+        }
+        background-color: rgb(134, 76, 28);
         text-align: center;
+        height: 200px;
     }
 
     #menu{
-        background-color: lightgrey;
+        background-color: rgb(245, 222, 188);
         text-align: center;
+        height: 400px;
       
     }
+    #panier{
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 601px){
+
+   
+
 }
