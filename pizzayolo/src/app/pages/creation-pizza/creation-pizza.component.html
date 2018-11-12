@@ -38,12 +38,17 @@
             
             <h2>Suggestions</h2>
 
-            <div id="listSugg" *ngFor="let suggestion of suggestions">
+            <!-- <div id="listSugg" *ngFor="let suggestion of suggestions">
                 <div id="ingSugg" *ngFor="let ingredient of suggestion.ingredients">
                     {{ingredient.name}}</div>
+            </div> -->
+
+            <div id="listSugg" *ngFor="let ingredient of suggestions">
+                
+                    {{ingredient.name}}
             </div>
 
-            <div id="listSugg"></div>
+            <!-- <div id="listSugg"></div> -->
             
         </div>
     </div>

@@ -48,16 +48,20 @@
     #suggestion{
         margin-top: -2em;
         width: 300px;
-        height: 350px;
+         
+        height: auto;
         background-color: lightblue;
         text-align: center;
         h2{
-            padding-top: 10px
+            padding: 10px
+        }
+        #listSugg{
+            padding-bottom: 10px;
         }
     }
 }
 
 #ingSugg{
-    font-size: 11px;
+    font-size: 12px;
     display: inline;
 }
