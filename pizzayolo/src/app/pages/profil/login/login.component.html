@@ -1,9 +1,13 @@
 <h1>Connectez-vous</h1>
 
 
-<div class="container">
+<div class="container"
+ >
 
-  <form id="formData" #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+  <form id="formData" 
+  #loginForm="ngForm" 
+  (ngSubmit)="onLogin(loginForm.value)"
+>
     <mat-form-field>
 
       <input matInput placeholder="Adresse mail" name="email" type="email" required ngModel>
