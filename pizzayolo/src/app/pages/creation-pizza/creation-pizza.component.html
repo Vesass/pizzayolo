@@ -27,8 +27,6 @@
         <mat-grid-tile class="ingredientsList" *ngFor="let ingredient of ingredients">
             <figure class="mat-figure">
                 <mat-checkbox color="warn" name="{{ingredient.name}}" value="{{ingredient._id}}" (change)="OnChange($event)" (change)="OnChangeSugg($event)">
-
-                <!-- <mat-checkbox color="warn" value="{{ingredient.name}}" (change)="OnChange($event)"> -->
                     {{ingredient.name}} - {{ingredient.price}}€
                 </mat-checkbox>
             </figure>
