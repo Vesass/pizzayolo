@@ -1,8 +1,13 @@
 mat-form-field{
-    // background-color: red;
     text-align: center;
     display: block;
     margin: auto;
-    // width: 500px;
+    width: 500px;
     line-height: 50px;
+}
+
+@media screen and (max-width: 601px) {
+    mat-form-field{
+        width: 300px;
+}
 }
