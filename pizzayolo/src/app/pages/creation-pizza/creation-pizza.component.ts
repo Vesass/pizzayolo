@@ -157,22 +157,12 @@ export class CreationPizzaComponent implements OnInit {
     if (event.checked === true || event.checked === false) {
 
       this.suggestionService.getRequest(this.selected).subscribe((reponse) => {
+        console.log(this.suggestions)
         console.log(reponse);
         this.suggestions = reponse;
       },
       error => console.log(error)
     )
-
-
-    // console.log(event.source.name)
-    //   this.suggestions.forEach(suggestion => {
-    //     suggestion.ingredients.forEach(ingredient => {
-    //       if (ingredient = this.selected)
-          
-    //     })
-    //    });
-
-
 
       this.suggestion = this.ingName
       
