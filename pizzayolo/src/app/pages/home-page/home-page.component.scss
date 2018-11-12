@@ -1,35 +1,37 @@
 
 .container{
-    //rappel : le style du container se trouve dans style.scss
+    margin : 0 auto 500px auto;
     header {
-        // background-color: lightpink;
-        img{
-            display: block;
-            width: 100px;
-            height: auto;
-            margin: 20px auto;
-            padding-top: 25px;
-        }
-        ul{
-            text-align: center;
-            font-weight: bold;
-        }
-        #concept{
-            padding-bottom: 5px;
-            p{
-                text-align: center;
-                // width: 500px;
-                margin: 0 auto;
-                padding: 10px;
-            }
-        }
-    }
+            #cover{
+                width: 100%;
+                height: auto;
+                    }
+            #concept{
+                padding-bottom: 5px;
+                margin: 0 100px;
 
-    #delivery{
-        // height: auto;
+                    #logowhite{
+                        display: block;
+                        width: 100px;
+                        height: auto;
+                        margin: 20px auto;
+                    }
+                    ul{
+                    text-align: center;
+                    font-weight: bold ;
+                        }
+                        p{
+                            text-align: center;
+                            margin: 0 auto;
+                            padding: 10px;
+                            // font-weight: bold;
+                
+                        }
+                    }
     }
 
     #main{
+        margin-bottom: 100px;
 
         h2{
             text-transform: uppercase;
@@ -66,4 +68,10 @@
     }
 }
 
+@media screen and (max-width: 601px){
+    .container {
+        margin: 50px 0 20px 0;
+    }
+
+}
 
