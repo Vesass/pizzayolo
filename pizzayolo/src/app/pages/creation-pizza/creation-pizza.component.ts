@@ -157,6 +157,7 @@ export class CreationPizzaComponent implements OnInit {
     if (event.checked === true || event.checked === false) {
 
       this.suggestionService.getRequest(this.selected).subscribe((reponse) => {
+        console.log(this.suggestions)
         console.log(reponse);
         this.suggestions = reponse;
       },
