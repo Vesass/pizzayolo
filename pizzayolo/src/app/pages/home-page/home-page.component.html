@@ -1,13 +1,23 @@
 <div class="container">
-    <header>
-        <img src="../../../assets/image/logo-blanc.png" alt="">
+    
+    
+    <header
+    fxLayout="column" 
+    fxLayout.xs="column" 
+    fxLayoutAlign="center center" 
+    fxLayoutGap="20px"
+    fxLayoutGap.xs="0">
+
+          <img id="cover" src= "../../../assets/image/bannière.jpg" alt="bannière"> 
+
+        <div id="concept">
+            <img id="logowhite" src="../../../assets/image/logo-blanc.png" alt="logo">
         <ul>
             <li>Rue d'Havré, 18</li>
             <li>7000 - Mons (BE)</li>
             <li>065/57.66.41</li>
         </ul>
-
-        <div id="concept">
+        
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorum perspiciatis! Minima in
                 dolore,
                 esse vitae similique praesentium, temporibus odit aspernatur eaque commodi quod porro nemo deleniti id
@@ -16,7 +26,10 @@
                 facilis
                 delectus error est, unde provident reiciendis.</p>
         </div>
+
+   
     </header>
+
 
     <section id="delivery">
         <app-delivery></app-delivery>
