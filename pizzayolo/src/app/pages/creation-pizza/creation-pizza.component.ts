@@ -163,17 +163,6 @@ export class CreationPizzaComponent implements OnInit {
       error => console.log(error)
     )
 
-
-    // console.log(event.source.name)
-    //   this.suggestions.forEach(suggestion => {
-    //     suggestion.ingredients.forEach(ingredient => {
-    //       if (ingredient = this.selected)
-          
-    //     })
-    //    });
-
-
-
       this.suggestion = this.ingName
       
 
