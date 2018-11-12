@@ -6,8 +6,24 @@ form {
     display: flex;
     flex-direction: column;
     width: 500px;
-    margin: 20px auto;
+    margin: 250px auto;
     .adresseInput{
         float: right;    
         }
+
+    button {
+        margin: 50px auto;
+        width: 100px;
+    }
+}
+
+
+@media screen and (max-width: 601px) {
+
+    form {
+        width: 300px;
+        margin-top: 60%;
+       
+} 
+    
 }
