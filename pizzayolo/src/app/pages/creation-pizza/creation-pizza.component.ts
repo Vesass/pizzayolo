@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { Ingredient } from '../../models/ingredient';
 import { Suggestion } from '../../models/suggestion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CompilerConfig } from '@angular/compiler';
+import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 
 
 
@@ -19,6 +21,7 @@ export class CreationPizzaComponent implements OnInit {
   suggestions: any;
   selected: any[];
   ingName: any[];
+  ingPrice: any[];
   suggestion: any[];
   IsCheckedC: boolean;
   IsCheckedT: boolean;
@@ -34,6 +37,7 @@ export class CreationPizzaComponent implements OnInit {
     this.IsDisabled = false;
     this.selected = [];
     this.ingName=["Coulis de tomate"];
+    this.ingPrice =[5];
   };
   
   ngOnInit() {
@@ -57,10 +61,7 @@ export class CreationPizzaComponent implements OnInit {
     //////////////////////// GESTION DU CHANGEMENT DE LA BASE ////////////////////
   
     OnChangeBase(event) {
-  
-      console.log(event.source);
-      
-  
+
       if (event.source.value === "Crème" && event.checked === true) {
         // Quand on clique sur la crème pour cocher la checkbox      
   
@@ -129,10 +130,13 @@ export class CreationPizzaComponent implements OnInit {
   //////////////////////// GESTION D'AJOUT DES INGREDIENTS ////////////////////
 
   OnChange(event) {
-
+    console.log(event);
+    
     if (event.checked === true) {
       this.ingName.push(" " + event.source.name);
       this.selected.push(event.source.value);
+      this.ingPrice
+      // this.ingPrice.push()
       // Ajouter l'ingrédient à l'array
     }
 
@@ -142,8 +146,9 @@ export class CreationPizzaComponent implements OnInit {
       // Retourne une array avec tous les éléments SAUF celui sur lequel on clique
 
     }
+  
     document.getElementById('ingredientsSelected').innerHTML = `${this.ingName}`
-    console.log(this.ingName)
+    console.log(this.ingPrice)
     // Affichage HTML
   }
 
@@ -157,13 +162,12 @@ export class CreationPizzaComponent implements OnInit {
     if (event.checked === true || event.checked === false) {
 
       this.suggestionService.getRequest(this.selected).subscribe((reponse) => {
-        console.log(this.suggestions)
-        console.log(reponse);
         this.suggestions = reponse;
+        console.log(reponse);
       },
       error => console.log(error)
     )
-
+    
       this.suggestion = this.ingName
       
 
