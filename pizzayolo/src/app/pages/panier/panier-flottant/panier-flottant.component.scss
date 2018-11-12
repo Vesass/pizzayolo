@@ -1,13 +1,13 @@
 
 #panier{
-    position: fixed;
+    // position: fixed;
     width: 300px;
-    top: 30%;
+    margin-bottom: 50px;
     background-color: gray;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    // grid-column-start: 2;
+    // grid-column-end: 3;
+    // grid-row-start: 1;
+    // grid-row-end: 3;
     text-align: center;
     img{
         width: 60px;
@@ -18,4 +18,20 @@
     .mat-flat-button{
         width: 100%;
     }
+}
+
+@media screen and (max-width: 601px){
+
+#panier{
+
+    height: 50px;
+    width: 100%;
+    img{
+        width: 30px;
+        height: 20px;
+        margin: 10px auto;
+    }
+
+    }
+
 }

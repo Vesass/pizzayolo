@@ -4,6 +4,8 @@
     // height: 798px;
     // padding-top: 50px;
     // width: 960px;
+
+
     #carte{
         padding: 10px;
         background-color: lightblue;
@@ -33,6 +35,18 @@
         }
     }
     
+    @media screen and (max-width: 601px){
+
+        .container{
+            margin-top: 50px;
+        }
+    }
+    @media screen and (max-width: 906px){
+
+        .container{
+            margin-top: 100px;
+        }
+    }
 
 
         
