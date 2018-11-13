@@ -21,7 +21,7 @@ export class CreationPizzaComponent implements OnInit {
   suggestions: any;
   selected: any[];
   ingName: any[];
-  ingPrice: any[];
+  ingPrice : any;
   suggestion: any[];
   IsCheckedC: boolean;
   IsCheckedT: boolean;
@@ -37,7 +37,8 @@ export class CreationPizzaComponent implements OnInit {
     this.IsDisabled = false;
     this.selected = [];
     this.ingName=["Coulis de tomate"];
-    this.ingPrice =[5];
+    this.ingPrice = 5;
+
   };
   
   ngOnInit() {
@@ -132,24 +133,22 @@ export class CreationPizzaComponent implements OnInit {
   OnChange(event) {
     console.log(event);
     
+    
     if (event.checked === true) {
       this.ingName.push(" " + event.source.name);
       this.selected.push(event.source.value);
-      this.ingPrice
-      // this.ingPrice.push()
-      // Ajouter l'ingrédient à l'array
+      this.ingPrice += parseFloat(event.source.ariaLabel);
+      // Ajouter l'ingrédient, son id et son prix(=ariaLabel(désigné manuellement)) à l'array
     }
-
+    
     else if (event.checked === false) {
       this.ingName = this.ingName.filter((ingredient) => { return ingredient !== " " + event.source.name })     
-      this.selected = this.selected.filter((id) => { return id !== event.source.value })
-      // Retourne une array avec tous les éléments SAUF celui sur lequel on clique
-
+      this.selected = this.selected.filter((id) => { return id !== event.source.value });
+      this.ingPrice -= parseFloat(event.source.ariaLabel);
+      console.log(this.ingPrice);
     }
-  
     document.getElementById('ingredientsSelected').innerHTML = `${this.ingName}`
-    console.log(this.ingPrice)
-    // Affichage HTML
+    document.getElementById('prixTotal').innerHTML = `${this.ingPrice}`
   }
 
 
@@ -169,7 +168,6 @@ export class CreationPizzaComponent implements OnInit {
     )
     
       this.suggestion = this.ingName
-      
 
       document.getElementById('listSugg').innerHTML = `${this.suggestion}`
     }
