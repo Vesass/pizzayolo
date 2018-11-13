@@ -41,10 +41,9 @@ li {
 
 .container {  
     //chaque page est contenue dans une div class container /!\
-    margin: 64px 50px 5px 50px;
-    height: 506px;
-    // background-color: lightblue;
-    //-->bgc bleu pour pouvoir visualiser le container dans son ensemble
+    margin: 0px auto 0px auto;
+    height: 100%;
+    background-color: rgb(58, 58, 58);
 }
 
 h1{
@@ -54,9 +53,10 @@ h1{
         margin-left:  auto; 
         width: 100%;
         margin-top: 64px;
+        margin-bottom: 0;
         text-align: center;
-        height: 50px;
-        line-height: 50px;
+        height: 120px;
+        line-height: 120px;
     }
 
 @media screen and (max-width: 601px){
