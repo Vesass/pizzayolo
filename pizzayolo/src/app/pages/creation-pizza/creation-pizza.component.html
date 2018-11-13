@@ -12,7 +12,7 @@
     <mat-grid-list cols="5" class="selectionIngredients">
         <h4>Ingrédients sélectionné(s):</h4>
         <p id="ingredientsSelected"></p>
-        <button mat-flat-button color="warn">+  €</button>
+        <button mat-flat-button color="warn">+  <span id="prixTotal">5</span>€</button>
     </mat-grid-list>
     <br>
     <mat-grid-list cols="4" rowHeight="6:1">
@@ -27,7 +27,12 @@
         </section>
         <mat-grid-tile class="ingredientsList" *ngFor="let ingredient of ingredients">
             <figure class="mat-figure">
-                <mat-checkbox color="warn" name="{{ingredient.name}}" value="{{ingredient._id}}" (change)="OnChange($event)" (change)="OnChangeSugg($event)">
+                <mat-checkbox color="warn" 
+                              name="{{ingredient.name}}" 
+                              value="{{ingredient._id}}"
+                              aria-label= "{{ingredient.price}}"
+                              (change)="OnChange($event)" 
+                              (change)="OnChangeSugg($event)">
                     {{ingredient.name}} - {{ingredient.price}}€
                 </mat-checkbox>
             </figure>
