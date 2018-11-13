@@ -12,7 +12,15 @@
     <mat-grid-list cols="5" class="selectionIngredients">
         <h4>Ingrédients sélectionné(s):</h4>
         <p id="ingredientsSelected"></p>
-        <button mat-flat-button color="warn">+  <span id="prixTotal">5</span>€</button>
+        <button mat-flat-button color="warn">+  <span id="prixTotal" >5</span>€</button>
+
+        <form class="name-form" *ngIf="this.ingPrice>5">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Le nom de votre pizza?">
+            </mat-form-field>
+            <button mat-stroked-button color="warn">Soumettre le nom</button>
+          </form>
+
     </mat-grid-list>
     <br>
     <mat-grid-list cols="4" rowHeight="6:1">

@@ -2,11 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { IngredientService } from '../../services/ingredient.service';
 import { SuggestionsService } from './../../services/suggestions.service';
 import { Router } from '@angular/router';
-import { Ingredient } from '../../models/ingredient';
-import { Suggestion } from '../../models/suggestion';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CompilerConfig } from '@angular/compiler';
-import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 
 
 
@@ -134,7 +129,7 @@ export class CreationPizzaComponent implements OnInit {
     console.log(event);
     
     
-    if (event.checked === true) {
+    if (event.checked) {
       this.ingName.push(" " + event.source.name);
       this.selected.push(event.source.value);
       this.ingPrice += parseFloat(event.source.ariaLabel);
