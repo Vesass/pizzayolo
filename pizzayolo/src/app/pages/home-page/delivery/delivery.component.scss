@@ -4,7 +4,31 @@ mat-form-field{
     margin: auto;
     width: 500px;
     line-height: 50px;
+    
+    mat-label{
+      color: white;
+    }
+
+    input {
+      color: white;
+     
+    }
+
+    button{
+      color: white;
+      border: 1px solid lightgrey !important;
+      &:hover{
+        background-color: rgb(216, 79, 79);
+        border: 1px solid rgb(58, 58, 58) !important;
+        transition: 0.5s;
+      }
+    }
+    
 }
+
+
+
+
 
 @media screen and (max-width: 601px) {
     mat-form-field{

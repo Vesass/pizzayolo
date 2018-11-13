@@ -1,25 +1,46 @@
 
 
 .container{
-    margin-top: 30px;
+    margin-top: 0;
     margin-right: 0;
     margin-left: 0;
+    height: auto;
     margin-bottom: 0;
+    height: 800px;
     //le code ci dessus prend le dessus sur style.scss
     
     p{
         padding: 10px;
         text-align: center;
-        font-weight: bold;
         width: 400px;
+        color: white;
+        a{
+            color: rgb(216, 79, 79);
+            text-decoration: none;
+            &:hover{
+                color: lightgrey;
+                transition: 0.5s;
+            }
+        }
+        span{
+            color: rgb(216, 79, 79);
+        }
     }
     
     form{
         width: 700px;
-        // background-color: lightgreen;
-       input{
-            // width: 100% !important;
+        background-color: lightgrey;
+        //je n'arrive pas à mettre les inputs en blanc du coup j'ai mis un fond gris temporaire pour voir l'espace que prend le form
+
+           input{
+            color: white !important;
+            } 
+        
+
+        button{
+            background-color: rgb(216, 79, 79) !important;
         }
+       
     };
   
    .wrapper{
