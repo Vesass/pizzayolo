@@ -1,6 +1,5 @@
 
 .container{
-    margin : 0 auto 500px auto;
     header {
             #cover{
                 width: 100%;
@@ -8,8 +7,6 @@
                     }
             #concept{
                 padding-bottom: 5px;
-                margin: 0 100px;
-
                     #logowhite{
                         display: block;
                         width: 100px;
@@ -19,26 +16,31 @@
                     ul{
                     text-align: center;
                     font-weight: bold ;
+                    color: white;
                         }
                         p{
                             text-align: center;
                             margin: 0 auto;
                             padding: 10px;
-                            // font-weight: bold;
+                            color: white;
                 
                         }
                     }
     }
 
+    #delivery{
+        margin-top: 35px;
+    }
+
     #main{
-        margin-bottom: 100px;
+        padding-bottom: 70px;
 
         h2{
             text-transform: uppercase;
         }
 
         a{
-            background-color: rgb(58, 58, 58);
+            background-color: rgb(216, 79, 79);
             display: block;
             width: 400px;
             text-decoration: none;
@@ -52,7 +54,7 @@
             }
         }
         #mainContent{
-            margin-top: 5px;
+            // margin-top: 5px;
             .pizzas{
                 background-color: lightgrey;
                 width: 300px;
@@ -72,6 +74,16 @@
     .container {
         margin: 50px 0 20px 0;
     }
+
+}
+
+@media screen and (min-width: 950px){
+ 
+#concept{
+            p{
+                 width: 800px;
+                 }
+                    }
 
 }
 
