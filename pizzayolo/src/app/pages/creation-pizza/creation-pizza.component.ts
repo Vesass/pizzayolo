@@ -178,5 +178,5 @@ export class CreationPizzaComponent implements OnInit {
 
 
 // Si click sur ingredient
-// vérifier dans quelles pizzas de la collection suggestions se trouve-t-il
+// vérifier da ns quelles pizzas de la collection suggestions se trouve-t-il
 // puis fait apparaitre les ingredients de ces pizzas
