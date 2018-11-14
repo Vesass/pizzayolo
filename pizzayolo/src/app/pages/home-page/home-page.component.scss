@@ -1,7 +1,89 @@
-header {
-    background-color: lightpink;
+
+.container{
+    header {
+            #cover{
+                width: 100%;
+                height: auto;
+                    }
+            #concept{
+                padding-bottom: 5px;
+                    #logowhite{
+                        display: block;
+                        width: 100px;
+                        height: auto;
+                        margin: 20px auto;
+                    }
+                    ul{
+                    text-align: center;
+                    font-weight: bold ;
+                    color: white;
+                        }
+                        p{
+                            text-align: center;
+                            margin: 0 auto;
+                            padding: 10px;
+                            color: white;
+                
+                        }
+                    }
+    }
+
+    #delivery{
+        margin-top: 35px;
+    }
+
+    #main{
+        padding-bottom: 70px;
+
+        h2{
+            text-transform: uppercase;
+        }
+
+        a{
+            background-color: rgb(216, 79, 79);
+            display: block;
+            width: 400px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            &:hover{
+                background-color: lightgrey;
+                transition: 0.5s;
+                color: black;
+            }
+        }
+        #mainContent{
+            // margin-top: 5px;
+            .pizzas{
+                background-color: lightgrey;
+                width: 300px;
+                height: 100px;
+                //à changer en fonction des datas
+                p{
+                    text-align: center;
+                }
+            }
+            
+        }
+
+    }
 }
 
-#delivery{
-    background-color: lightblue;
+@media screen and (max-width: 601px){
+    .container {
+        margin: 50px 0 20px 0;
+    }
+
 }
+
+@media screen and (min-width: 950px){
+ 
+#concept{
+            p{
+                 width: 800px;
+                 }
+                    }
+
+}
+

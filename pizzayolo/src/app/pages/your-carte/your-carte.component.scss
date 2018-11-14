@@ -1,41 +1,30 @@
 .container{
-    width: 960px;
-    margin: 10px auto;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 660px 300px;
-    
-
-    #titreVotreCarte{
-        background-color: grey;
-        text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        height: 100px;
-
-    }
-
+    // margin: auto 100px;
+    // height: 798px;
+    // padding-top: 50px;
+    // width: 960px;
     #top3{
-        background-color: rgb(83, 83, 83);
+        h2{
+            padding: 10px;
+        }
+        background-color: rgb(134, 76, 28);
         text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        height: 300px;
-
+        height: 200px;
     }
 
     #menu{
-        background-color: lightgrey;
+        background-color: rgb(245, 222, 188);
         text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        height: 500px;
+        height: 400px;
+      
     }
     #panier{
-        background-color: rgb(199, 199, 199);
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 4;
+        margin-top: 16px;
     }
+}
+
+@media screen and (max-width: 601px){
+
+   
+
 }

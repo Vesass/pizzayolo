@@ -1,20 +1,47 @@
+
+<h1>Nous contacter</h1>
+
 <div class="container">
 
-  <h1>Nous contacter</h1>
+<div id="mainContent"
+    fxLayout="column"
+    fxLayout.xs="column" 
+    fxLayoutAlign="center center"
+    fxLayoutGap="20px"
+    fxLayoutGap.xs="20px"
+> 
 
-  <mat-form-field>
-    <input matInput placeholder="Prénom">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Nom">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Votre adresse e-mail" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-  </mat-form-field>
-  <mat-form-field>
-    <textarea matInput placeholder="Votre message"></textarea>
-  </mat-form-field>
+
+  <p>Envoyez-nous un e-mail à <a href=""> info@pizza.yolo</a> ou remplissez le formulaire ci-dessous. Vous pouvez également communiquer avec nous par téléphone au <span>067/57.66.41</span></p>
+
+  <form 
+      fxLayout="column"
+      fxLayout.xs="column" 
+      fxLayoutAlign="center center"
+      fxLayoutGap="20px"
+      fxLayoutGap.xs="10px"> 
+
+      <mat-form-field>
+        <input matInput placeholder="Prénom">
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Nom">
+      </mat-form-field>
+      <mat-form-field >
+        <input matInput placeholder="Votre adresse e-mail" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+      <textarea matInput placeholder="Votre message" ></textarea>
+      </mat-form-field>
+
   <button mat-stroked-button>Envoyer</button>
+  
+  </form>
+  
+  </div>
 
+ 
+  <iframe class="wrapper" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.319857578522!2d3.9512773515951753!3d50.45376819490562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c25002784626c3%3A0x514fec3a5471b40c!2sRue+d&#39;Havr%C3%A9+18%2C+7000+Mons!5e0!3m2!1sfr!2sbe!4v1541587017798" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
+

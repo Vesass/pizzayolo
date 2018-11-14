@@ -1,18 +1,57 @@
+
+
 .container{
-    width: 960px;
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.151);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 100px auto;
-    mat-form-field{
-        width: 500px;
-    };
-    button{
-        margin-top: 50px;
-        margin-bottom: 20px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    height: auto;
+    margin-bottom: 0;
+    height: 800px;
+    //le code ci dessus prend le dessus sur style.scss
+    
+    p{
+        padding: 10px;
+        text-align: center;
+        width: 400px;
+        color: white;
+        a{
+            color: rgb(216, 79, 79);
+            text-decoration: none;
+            &:hover{
+                color: lightgrey;
+                transition: 0.5s;
+            }
+        }
+        span{
+            color: rgb(216, 79, 79);
+        }
     }
+    
+    form{
+        width: 700px;
+        background-color: lightgrey;
+        //je n'arrive pas à mettre les inputs en blanc du coup j'ai mis un fond gris temporaire pour voir l'espace que prend le form
+
+           input{
+            color: white !important;
+            } 
+        
+
+        button{
+            background-color: rgb(216, 79, 79) !important;
+        }
+       
+    };
+  
+   .wrapper{
+        margin-top: 20px;
+        height: 200px;
+        margin-right: auto; 
+        margin-left:  auto; 
+        width: 100%;
+    }
+
 }
+
+
+

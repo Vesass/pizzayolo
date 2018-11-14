@@ -1,31 +1,50 @@
-#container{
-    width: 960px;
-    margin: 10px auto;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 660px 300px;
+
+.container{
+   
+
+
+    #carte{
+        padding: 10px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+        #pizzaName{
+            background-color: lightgrey;
+                font-weight: bolder;
+                font-size: 1.5em;
+                width: 100%;
+            }
+            #ingredients{
+                display: inline;
+                margin-right: 9px;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 14px
+            }
+            .mat-flat-button{
+                line-height: 30px;
+                width: 80px;
+                height: 30px;
+                margin: auto 2%;
+            }
+
+        }
+    }
     
+    @media screen and (max-width: 601px){
 
-    #title{
-        background-color: gray;
-        text-align: center;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        height: 100px;
+        .container{
+            margin-top: 50px;
+        }
+    }
+    @media screen and (max-width: 906px){
 
+        .container{
+        }
     }
-    #menu{
-        background-color: lightgrey;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        height: 1000px;
-    }
-    #panier{
-        background-color: gray;
-        opacity : 0.2;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
-    }
-}
+
+
+        
+
+    
