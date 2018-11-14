@@ -24,7 +24,7 @@ export class CreationPizzaComponent implements OnInit {
   LabelAlign: string;
   IsDisabled: boolean;
   isFormPizzaNameAppear: boolean = false;
-  addToPanier: any[]
+  addToPanier: number;
 
   constructor(private ingredientService: IngredientService, private suggestionService: SuggestionsService, private router: Router) {
     this.IsCheckedC = false;
@@ -35,7 +35,7 @@ export class CreationPizzaComponent implements OnInit {
     this.selected = [];
     this.ingName = ["Coulis de tomate"];
     this.ingPrice = 5;
-    this.addToPanier = [];
+    this.addToPanier = 0;
 
   };
 
@@ -153,8 +153,10 @@ export class CreationPizzaComponent implements OnInit {
   /////////////////////////// AJOUT AU PANIER /////////////////////////////////
 
   toPanier(){
-    this.addToPanier+= this.ingPrice
+    this.addToPanier += this.ingPrice
     document.getElementById('onPanier').innerHTML = `${this.addToPanier}`
+    console.log(typeof(this.addToPanier));
+    
     console.log(this.addToPanier);
     
   }
