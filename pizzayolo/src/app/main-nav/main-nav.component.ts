@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { ApiService } from './../services/api.service';
+import { Router } from '@angular/router'
+
+
 
 @Component({
   selector: 'app-main-nav',
@@ -15,6 +19,15 @@ export class MainNavComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private apiService: ApiService, private breakpointObserver: BreakpointObserver, private router: Router) { }
+
+
+  onLogout(e) {
+    e.preventDefault();
+    this.apiService.logout();
+    console.log('on logout')
+    this.router.navigateByUrl("/")
+
+  }
 
 }
