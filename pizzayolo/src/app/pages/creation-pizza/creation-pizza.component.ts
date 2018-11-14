@@ -155,6 +155,8 @@ export class CreationPizzaComponent implements OnInit {
   toPanier(){
     this.addToPanier+= this.ingPrice
     document.getElementById('onPanier').innerHTML = `${this.addToPanier}`
+    console.log(this.addToPanier);
+    
   }
 
   ////////////////////// GESTION DES SUGGESTIONS ///////////////////////////////
