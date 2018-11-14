@@ -10,8 +10,10 @@
       <a mat-list-item [routerLink]="['/yourCarte']" routerLinkActive="active">Votre carte</a>
       <a mat-list-item [routerLink]="['/contact']" routerLinkActive="active">Contact</a>
       <a mat-list-item [routerLink]="['/panier']" routerLinkActive="active">Panier</a>
-      <a mat-list-item class="test" [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a>
-      <a mat-list-item [routerLink]="['/editProfil']" routerLinkActive="active">Mon profil</a>
+      <a mat-list-item *ngIf="!this.apiService.loggedIn" class="test" [routerLink]="['/login']" routerLinkActive="active">Se connecter</a>
+      <a mat-list-item *ngIf="!this.apiService.loggedIn" class="test" [routerLink]="['/createProfil']" routerLinkActive="active">S'inscrire</a>
+      <a mat-list-item *ngIf="this.apiService.loggedIn" [routerLink]="['/editProfil']" routerLinkActive="active">Mon profil</a>
+      <a mat-list-item *ngIf="this.apiService.loggedIn" (click)="onLogout($event)">Se deconnecter</a>
     </mat-nav-list>
   </mat-sidenav>
 
