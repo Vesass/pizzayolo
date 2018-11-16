@@ -1,0 +1,41 @@
+
+
+
+mat-toolbar {
+display: flex;
+justify-content: space-between;
+}
+.option {
+    font-family: 'Maven Pro', sans-serif;
+    display: flex;
+    button {
+        width: 9em;
+        display: flex;
+        justify-content: center;
+       
+    }
+    .button-ap {
+        width: 5em;
+    }
+    a {
+        text-decoration: none;
+        
+        color: white;
+        font-size: 10px;
+        &:hover {
+            border-bottom: 1px solid white;
+        }
+    }
+
+}
+
+
+    .test {
+        text-decoration: none;
+        color: black;
+        font-size: 10px;
+        padding: .8em;
+        margin: .2em;
+     
+        
+    }
