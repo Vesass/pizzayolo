@@ -8,6 +8,9 @@ import { OurCarteComponent } from './../pages/our-carte/our-carte.component';
 import { CreationPizzaComponent } from './../pages/creation-pizza/creation-pizza.component';
 import { ContactComponent } from './../pages/contact/contact.component';
 import { HomePageComponent } from './../pages/home-page/home-page.component';
+import { AdminComponent } from "./../admin/admin.component";
+import { LoginComponent } from "./../pages/profil/login/login.component";
+import { LoggedInGuard } from "./../guard/logged-in.guard";
 import { Routes } from '@angular/router';
 
 
@@ -18,11 +21,13 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'ourCarte', component: OurCarteComponent },
     { path: 'yourCarte', component: YourCarteComponent },
-    { path: 'creationPizza', component: CreationPizzaComponent },
+    { path: 'creationPizza', /* canActivate: [LoggedInGuard] ,*/ component: CreationPizzaComponent },
     { path: 'panier', component: PanierComponent },
     { path: 'paiement', component: PaiementComponent },
     { path: 'editProfil', component: EditProfileComponent },
-    { path: 'createProfil', component: CreateProfileComponent }
+    { path: 'createProfil', component: CreateProfileComponent },
+    { path: "admin", component: AdminComponent },
+    { path: "login", component: LoginComponent }
 ]
 
 // export default routes;

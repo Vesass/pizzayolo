@@ -1,12 +1,21 @@
-<div class="container">
-    <div id="titreVotreCarte">
-        <h1>Votre carte</h1>
+<h1>Votre carte</h1>
+
+
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="center">
+
+  <div id="content" fxFlex="70%">
+
+        <div id="top3">
+            <h2>Top 3 du mois</h2>
+        </div>
+
+        <div id="menu">
+            <h2>Menu</h2>
+        </div>
+
     </div>
-    <div id="panier">espace pour le panier</div>
-    <div id="top3">
-        <h2>Top 3 du mois</h2>
-    </div>
-    <div id="menu">
-        <h2>Menu</h2>
-    </div>
+    
+        <app-panier-flottant id="panier" fxFlex="30%">
+            <div id="suggestion"></div>
+        </app-panier-flottant>
 </div>

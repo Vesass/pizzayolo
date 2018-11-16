@@ -1,2 +1,60 @@
-<p *ngFor="let ing of ingredients">{{ing.name}} {{ing.price}}</p>
-<p *ngFor="let suggestion of suggestions">{{suggestion.name}} </p>
+<h1>Créez votre pizza ! </h1>
+
+<div class="container">
+    <div id="enTete">
+        <h2>Base = 5€</h2>
+        <h3>Sélectionnez les ingrédients que vous souhaitez mettre sur votre pizza.</h3>
+        <h3>Nous vous aidons à choisir grâce aux suggestions affichées sur la droite, n'hésitez donc pas à vous en inspirer !
+        </h3>
+    </div>
+    <mat-grid-list cols="5" class="selectionIngredients">
+        <h4>Ingrédients sélectionné(s):</h4>
+        <p id="ingredientsSelected"></p>
+
+        <button (click)="formIsAppear()" mat-flat-button color="warn">+
+            <span id="prixTotal">5</span>€</button>
+
+        <form class="name-form" *ngIf="this.isFormPizzaNameAppear">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Le nom de votre pizza?">
+            </mat-form-field>
+            <button mat-stroked-button color="warn" (click)="toPanier()">Ajouter au panier</button>
+        </form>
+
+    </mat-grid-list>
+    <br>
+    <mat-grid-list cols="4" rowHeight="6:1">
+        <section class="base">
+            Choisissez une base:
+            <br>
+            <mat-checkbox color="warn" (change)="OnChangeBase($event)" [(ngModel)]="IsCheckedT" value="Coulis de tomate">
+                Coulis de tomate
+            </mat-checkbox>
+            <mat-checkbox color="warn" (change)="OnChangeBase($event)" [(ngModel)]="IsCheckedC" value="Crème">
+                Crème
+            </mat-checkbox>
+        </section>
+        <mat-grid-tile class="ingredientsList" *ngFor="let ingredient of ingredients">
+            <figure class="mat-figure">
+                <mat-checkbox color="warn" name="{{ingredient.name}}" value="{{ingredient._id}}" aria-label="{{ingredient.price}}" (change)="OnChange($event)"
+                    (change)="OnChangeSugg($event)">
+                    {{ingredient.name}} - {{ingredient.price}}€
+                </mat-checkbox>
+            </figure>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div id="panierSugg">
+        <app-panier-flottant></app-panier-flottant>
+        <div id="suggestion">
+
+            <h2>Suggestions</h2>
+
+
+            <div id="listSugg" *ngFor="let ingredient of suggestions">
+                {{ingredient.name}}
+            </div>
+
+
+        </div>
+    </div>
+</div>
